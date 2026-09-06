@@ -1,0 +1,111 @@
+
+== 127.0.0.1:34462 -> 127.0.0.1:4317  (client->server, 598 payload bytes)
+  [client->server] connection preface: b'PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n' (24 bytes)
+  [client->server] frame @24: 000024040000000000  len=36 type=SETTINGS flags=- stream=0
+      ENABLE_PUSH = 0
+      MAX_CONCURRENT_STREAMS = 0
+      INITIAL_WINDOW_SIZE = 4194304
+      MAX_FRAME_SIZE = 4194304
+      MAX_HEADER_LIST_SIZE = 16384
+      65027 = 1
+  [client->server] frame @69: 000004080000000000  len=4 type=WINDOW_UPDATE flags=- stream=0
+      increment = 4128769
+  [client->server] frame @82: 000000040100000000  len=0 type=SETTINGS flags=ACK stream=0
+  [client->server] frame @91: 00011c010400000001  len=284 type=HEADERS flags=END_HEADERS stream=1
+      :path: /opentelemetry.proto.collector.trace.v1.TraceService/Export
+      :authority: 127.0.0.1:4317
+      :method: POST
+      :scheme: http
+      content-type: application/grpc
+      te: trailers
+      grpc-encoding: gzip
+      grpc-accept-encoding: identity, deflate, gzip
+      grpc-timeout: 5S
+      user-agent: grpc-python/1.83.1 grpc-c/56.0.0 (linux; chttp2)
+  [client->server] frame @384: 000004080000000001  len=4 type=WINDOW_UPDATE flags=- stream=1
+      increment = 5
+  [client->server] frame @397: 000091000100000001  len=145 type=DATA flags=END_STREAM stream=1
+      gRPC Length-Prefixed-Message @0: flag=00 length=0000008c -> 140
+      Protobuf:
+0000          0a8901   field=1  LEN     len=137
+                raw:  0a1c0a1a0a0c736572766963652e6e616d65120a0a08636865636b6f757412690a080a066d616e75616c125d0a105b8efff798038103d269b633813fc60c1208eee19b7ec3c1b1742a09474554202f63617274300239008029fb88b9d21841203ce8fb88b9d2184a1c0a13687474702e726571756573742e6d6574686f6412050a034745547a021801
+                candidate sub-message:
+0003              0a1c     field=1  LEN     len=28
+                    raw:  0a1a0a0c736572766963652e6e616d65120a0a08636865636b6f7574
+                    candidate sub-message:
+0005                  0a1a     field=1  LEN     len=26
+                        raw:  0a0c736572766963652e6e616d65120a0a08636865636b6f7574
+                        candidate sub-message:
+0007                      0a0c     field=1  LEN     len=12
+                            raw:  736572766963652e6e616d65
+                            utf8: 'service.name'
+0015                      120a     field=2  LEN     len=10
+                            raw:  0a08636865636b6f7574
+                            candidate sub-message:
+0017                          0a08     field=1  LEN     len=8
+                                raw:  636865636b6f7574
+                                utf8: 'checkout'
+0021              1269     field=2  LEN     len=105
+                    raw:  0a080a066d616e75616c125d0a105b8efff798038103d269b633813fc60c1208eee19b7ec3c1b1742a09474554202f63617274300239008029fb88b9d21841203ce8fb88b9d2184a1c0a13687474702e726571756573742e6d6574686f6412050a034745547a021801
+                    candidate sub-message:
+0023                  0a08     field=1  LEN     len=8
+                        raw:  0a066d616e75616c
+                        candidate sub-message:
+0025                      0a06     field=1  LEN     len=6
+                            raw:  6d616e75616c
+                            utf8: 'manual'
+002d                  125d     field=2  LEN     len=93
+                        raw:  0a105b8efff798038103d269b633813fc60c1208eee19b7ec3c1b1742a09474554202f63617274300239008029fb88b9d21841203ce8fb88b9d2184a1c0a13687474702e726571756573742e6d6574686f6412050a034745547a021801
+                        candidate sub-message:
+002f                      0a10     field=1  LEN     len=16
+                            raw:  5b8efff798038103d269b633813fc60c
+0041                      1208     field=2  LEN     len=8
+                            raw:  eee19b7ec3c1b174
+004b                      2a09     field=5  LEN     len=9
+                            raw:  474554202f63617274
+                            utf8: 'GET /cart'
+0056                      30       field=6  VARINT  value=02 -> 2
+0058                      39       field=7  I64     bytes=008029fb88b9d218 -> u64 1788696000000000000 (LE)
+0061                      41       field=8  I64     bytes=203ce8fb88b9d218 -> u64 1788696000012500000 (LE)
+006a                      4a1c     field=9  LEN     len=28
+                            raw:  0a13687474702e726571756573742e6d6574686f6412050a03474554
+                            candidate sub-message:
+006c                          0a13     field=1  LEN     len=19
+                                raw:  687474702e726571756573742e6d6574686f64
+                                utf8: 'http.request.method'
+0081                          1205     field=2  LEN     len=5
+                                raw:  0a03474554
+                                candidate sub-message:
+                                  (max depth reached)
+0088                      7a02     field=15 LEN     len=2
+                            raw:  1801
+                            candidate sub-message:
+008a                          18       field=3  VARINT  value=01 -> 1
+  [client->server] frame @551: 000004080000000000  len=4 type=WINDOW_UPDATE flags=- stream=0
+      increment = 5
+  [client->server] frame @564: 000008060100000000  len=8 type=PING flags=ACK stream=0
+  [client->server] frame @581: 000008060000000000  len=8 type=PING flags=- stream=0
+
+== 127.0.0.1:4317 -> 127.0.0.1:34462  (server->client, 242 payload bytes)
+  [server->client] frame @0: 000018040000000000  len=24 type=SETTINGS flags=- stream=0
+      INITIAL_WINDOW_SIZE = 4194304
+      MAX_FRAME_SIZE = 4194304
+      MAX_HEADER_LIST_SIZE = 16384
+      65027 = 1
+  [server->client] frame @33: 000004080000000000  len=4 type=WINDOW_UPDATE flags=- stream=0
+      increment = 4128769
+  [server->client] frame @46: 000000040100000000  len=0 type=SETTINGS flags=ACK stream=0
+  [server->client] frame @55: 000004080000000000  len=4 type=WINDOW_UPDATE flags=- stream=0
+      increment = 145
+  [server->client] frame @68: 000008060000000000  len=8 type=PING flags=- stream=0
+  [server->client] frame @85: 00004e010400000001  len=78 type=HEADERS flags=END_HEADERS stream=1
+      :status: 200
+      content-type: application/grpc
+      grpc-accept-encoding: identity, deflate, gzip
+  [server->client] frame @172: 000005000000000001  len=5 type=DATA flags=- stream=1
+      gRPC Length-Prefixed-Message @0: flag=00 length=00000000 -> 0
+      (empty message: ExportTraceServiceResponse with no fields serializes to zero bytes)
+  [server->client] frame @186: 00001e010500000001  len=30 type=HEADERS flags=END_STREAM|END_HEADERS stream=1
+      grpc-status: 0   (OK)
+      grpc-message: 
+  [server->client] frame @225: 000008060100000000  len=8 type=PING flags=ACK stream=0

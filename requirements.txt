@@ -1,0 +1,9 @@
+opentelemetry-proto==1.44.0
+protobuf==7.34.1
+grpcio==1.83.1
+googleapis-common-protos==1.75.3
+opentelemetry-sdk==1.44.0
+opentelemetry-exporter-otlp-proto-grpc==1.44.0
+scapy==2.7.0
+hpack==4.2.0
+pytest==9.0.2

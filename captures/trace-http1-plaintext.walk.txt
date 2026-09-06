@@ -1,0 +1,75 @@
+
+== 127.0.0.1:55488 -> 127.0.0.1:4318  (client->server, 332 payload bytes)
+  [client->server] head (192 bytes):
+      POST /v1/traces HTTP/1.1
+      Accept-Encoding: identity
+      Content-Length: 140
+      Host: 127.0.0.1:4318
+      Content-Type: application/x-protobuf
+      User-Agent: otlp-on-the-wire/urllib
+      Connection: close
+  [client->server] body: 140 bytes, first bytes 0a89010a1c0a1a0a ...
+      Protobuf:
+0000          0a8901   field=1  LEN     len=137
+                raw:  0a1c0a1a0a0c736572766963652e6e616d65120a0a08636865636b6f757412690a080a066d616e75616c125d0a105b8efff798038103d269b633813fc60c1208eee19b7ec3c1b1742a09474554202f63617274300239008029fb88b9d21841203ce8fb88b9d2184a1c0a13687474702e726571756573742e6d6574686f6412050a034745547a021801
+                candidate sub-message:
+0003              0a1c     field=1  LEN     len=28
+                    raw:  0a1a0a0c736572766963652e6e616d65120a0a08636865636b6f7574
+                    candidate sub-message:
+0005                  0a1a     field=1  LEN     len=26
+                        raw:  0a0c736572766963652e6e616d65120a0a08636865636b6f7574
+                        candidate sub-message:
+0007                      0a0c     field=1  LEN     len=12
+                            raw:  736572766963652e6e616d65
+                            utf8: 'service.name'
+0015                      120a     field=2  LEN     len=10
+                            raw:  0a08636865636b6f7574
+                            candidate sub-message:
+0017                          0a08     field=1  LEN     len=8
+                                raw:  636865636b6f7574
+                                utf8: 'checkout'
+0021              1269     field=2  LEN     len=105
+                    raw:  0a080a066d616e75616c125d0a105b8efff798038103d269b633813fc60c1208eee19b7ec3c1b1742a09474554202f63617274300239008029fb88b9d21841203ce8fb88b9d2184a1c0a13687474702e726571756573742e6d6574686f6412050a034745547a021801
+                    candidate sub-message:
+0023                  0a08     field=1  LEN     len=8
+                        raw:  0a066d616e75616c
+                        candidate sub-message:
+0025                      0a06     field=1  LEN     len=6
+                            raw:  6d616e75616c
+                            utf8: 'manual'
+002d                  125d     field=2  LEN     len=93
+                        raw:  0a105b8efff798038103d269b633813fc60c1208eee19b7ec3c1b1742a09474554202f63617274300239008029fb88b9d21841203ce8fb88b9d2184a1c0a13687474702e726571756573742e6d6574686f6412050a034745547a021801
+                        candidate sub-message:
+002f                      0a10     field=1  LEN     len=16
+                            raw:  5b8efff798038103d269b633813fc60c
+0041                      1208     field=2  LEN     len=8
+                            raw:  eee19b7ec3c1b174
+004b                      2a09     field=5  LEN     len=9
+                            raw:  474554202f63617274
+                            utf8: 'GET /cart'
+0056                      30       field=6  VARINT  value=02 -> 2
+0058                      39       field=7  I64     bytes=008029fb88b9d218 -> u64 1788696000000000000 (LE)
+0061                      41       field=8  I64     bytes=203ce8fb88b9d218 -> u64 1788696000012500000 (LE)
+006a                      4a1c     field=9  LEN     len=28
+                            raw:  0a13687474702e726571756573742e6d6574686f6412050a03474554
+                            candidate sub-message:
+006c                          0a13     field=1  LEN     len=19
+                                raw:  687474702e726571756573742e6d6574686f64
+                                utf8: 'http.request.method'
+0081                          1205     field=2  LEN     len=5
+                                raw:  0a03474554
+                                candidate sub-message:
+                                  (max depth reached)
+0088                      7a02     field=15 LEN     len=2
+                            raw:  1801
+                            candidate sub-message:
+008a                          18       field=3  VARINT  value=01 -> 1
+
+== 127.0.0.1:4318 -> 127.0.0.1:55488  (server->client, 149 payload bytes)
+  [server->client] head (149 bytes):
+      HTTP/1.1 200 OK
+      Server: BaseHTTP/0.6 Python/3.12.3
+      Date: Sun, 06 Sep 2026 17:10:02 GMT
+      Content-Type: application/x-protobuf
+      Content-Length: 0
+  [server->client] body: 0 bytes

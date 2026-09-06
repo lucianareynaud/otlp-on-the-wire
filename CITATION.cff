@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this repository, its fixtures, captures, or offset map, please cite it as below."
+title: "OTLP on the Wire"
+type: software
+authors:
+  - family-names: "Reynaud"
+    given-names: "Luciana"
+version: "1.0.0"
+date-released: "2026-09-06"
+url: "https://github.com/lucianareynaud/otlp-on-the-wire"
+repository-code: "https://github.com/lucianareynaud/otlp-on-the-wire"
+abstract: >-
+  Reproducible evidence, packet captures, deterministic fixtures, failure cases,
+  and tooling for reading the OpenTelemetry Protocol (OTLP) byte by byte across
+  Protobuf, OTLP/HTTP, and OTLP/gRPC.
+license: "Apache-2.0"
